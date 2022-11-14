@@ -1,6 +1,6 @@
 {
-  "name": "new-app",
-  "version": "0.1.0",
+  "name": "playstation-games",
+  "version": "0.5.0",
   "homepage": "https://KeriCarpenterProg.github.io/playstation-games",
   "private": true,
   "dependencies": {

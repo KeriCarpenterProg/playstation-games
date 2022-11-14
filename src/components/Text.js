@@ -18,7 +18,7 @@ class Text extends React.Component {
       </div>
     ));
     const backgroundImage = games[activeGame].screenshots[0];
-    console.log(`Background image: ${backgroundImage}`);
+    // console.log(`Background image: ${backgroundImage}`);
 
     return (
       <div>
@@ -32,7 +32,7 @@ class Text extends React.Component {
             <div className="col s12 m4">
             <img src={games[activeGame].cover} alt={games[activeGame].name} width="100%"></img>
             </div>
-          <div className="col s12 m8">
+          <div className="col s12 m8 white-text white-transparent">
             <h1>{games[activeGame].name}</h1>
             <p>{games[activeGame].summary}</p>
             <p>Release Date: {games[activeGame].release}</p>
