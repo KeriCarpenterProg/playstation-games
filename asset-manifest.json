@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/playstation-games/static/css/main.44e0f074.css",
-    "main.js": "/playstation-games/static/js/main.c9f543c7.js",
-    "static/js/787.7b63f85e.chunk.js": "/playstation-games/static/js/787.7b63f85e.chunk.js",
+    "main.css": "/playstation-games/static/css/main.795fee14.css",
+    "main.js": "/playstation-games/static/js/main.30b19a59.js",
+    "static/js/787.3b178e22.chunk.js": "/playstation-games/static/js/787.3b178e22.chunk.js",
     "index.html": "/playstation-games/index.html",
-    "main.44e0f074.css.map": "/playstation-games/static/css/main.44e0f074.css.map",
-    "main.c9f543c7.js.map": "/playstation-games/static/js/main.c9f543c7.js.map",
-    "787.7b63f85e.chunk.js.map": "/playstation-games/static/js/787.7b63f85e.chunk.js.map"
+    "main.795fee14.css.map": "/playstation-games/static/css/main.795fee14.css.map",
+    "main.30b19a59.js.map": "/playstation-games/static/js/main.30b19a59.js.map",
+    "787.3b178e22.chunk.js.map": "/playstation-games/static/js/787.3b178e22.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44e0f074.css",
-    "static/js/main.c9f543c7.js"
+    "static/css/main.795fee14.css",
+    "static/js/main.30b19a59.js"
   ]
 }
