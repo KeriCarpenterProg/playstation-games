@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import "./App.css";
+import Header from "./components/Header";
+import Text from './components/Text';
+import PictureBox from './components/PictureBox';
+import BottomOfPage from './components/BottomOfPage';
+import FetchGameData from './components/FetchGameData';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    activeGame: 0
+  }
+  clickButton = (index) => {
+    // console.log("I clicked the button and the index value is " + index);
+    this.setState({ activeGame: index }
+      // , () =>
+      // console.log("This is the value of activeGame " + this.state.activeGame)
+    );
+  }
+  
+  render() {
+    const {activeGame} = this.state;
+
+    return (
+      <div className="App">
+        <Header 
+          activeGame={activeGame}
+          clickEvent={this.clickButton}
+        />
+
+        <Text activeGame={activeGame} />
+        <PictureBox activeGame={activeGame}/>
+        <BottomOfPage />
+      </div>
+    );
+  }
 }
 
 export default App;
