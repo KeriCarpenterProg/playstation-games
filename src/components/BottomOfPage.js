@@ -11,7 +11,13 @@ export class BottomOfPage extends React.Component {
                 <Footer
                     className="Playstation 5 Games"
                     copyrights="Copyright 2024 Keri Carpenter All Rights Reserved"
-                    links={<ul><li><a className="grey-text text-lighten-3" href="#!">Link 1</a></li><li><a className="grey-text text-lighten-3" href="#!">Link 2</a></li><li><a className="grey-text text-lighten-3" href="#!">Link 3</a></li><li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li></ul>}
+                    links={
+                    <ul>
+                    <li><a className="grey-text text-lighten-3" 
+                    href="https://kericarpenterprog.github.io/calculator-ssh-app/">
+                    Calculator App as a React App</a></li>
+                    <li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>}
                     moreLinks={<a className="grey-text text-lighten-4 right" href="#!"><FetchGameData /></a>}
                     >
                     <h5 className="white-text">
