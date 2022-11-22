@@ -22,10 +22,13 @@ class Text extends React.Component {
 
     return (
       <div>
-      <div className="parallax-background" style={{
+      <div className="wrapper">
+      <div className="parallax-background" 
+        style={{
         backgroundImage:
-          `url(${backgroundImage})`
-  }}></div>
+        `url(${backgroundImage})`
+        }}>
+      </div>
       <div className="section move-top">
         <div className="container">
           <div className="row">
@@ -41,8 +44,9 @@ class Text extends React.Component {
           </div>
         </div>
         </div>
-        </div>
-      <div className="section">
+      </div>
+      </div>
+      <div className="section move-top">
         <div className="container">
           <div className="row">
             <div className="col s12 m4">

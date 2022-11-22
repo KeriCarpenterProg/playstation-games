@@ -29,7 +29,7 @@ class PictureBox extends React.Component {
     ));
       return (
         <div>
-        <section>
+        <section className="move-top">
         <Slider
           fullscreen={false}
           options={{
@@ -40,52 +40,11 @@ class PictureBox extends React.Component {
           }}
         >
         {urls}
-{/*         <Slide image={<img alt="" src={games[activeGame].screenshots[0]}/>}>
-            <Caption placement="center">
-              <h3>
-                This is our big Tagline!
-              </h3>
-              <h5 className="light grey-text text-lighten-3">
-                Here's our small slogan.
-              </h5>
-            </Caption>
-            </Slide>
-            <Slide image={<img alt="" src={games[activeGame].screenshots[1]}/>}>
-              <Caption placement="left">
-                <h3>
-                  Left Aligned Caption
-                </h3>
-                <h5 className="light grey-text text-lighten-3">
-                  Here's our small slogan.
-                </h5>
-              </Caption>
-            </Slide>
-            <Slide image={<img alt="" src={games[activeGame].screenshots[2]}/>}>
-              <Caption placement="right">
-                <h3>
-                  Right Aligned Caption
-                </h3>
-                <h5 className="light grey-text text-lighten-3">
-                  Here's our small slogan.
-                </h5>
-              </Caption>
-            </Slide>
-            <Slide image={<img alt="" src={games[activeGame].screenshots[3]}/>}>
-              <Caption placement="center">
-                <h3>
-                  This is our big Tagline!
-                </h3>
-                <h5 className="light grey-text text-lighten-3">
-                  Here's our small slogan.
-                </h5>
-              </Caption>
-            </Slide>
-        */}
           </Slider>
         </section>
           <section
             id="carousel"
-            className="section red lighten-1 white-text scrollspy"
+            className="move-top section red lighten-1 white-text scrollspy"
           >
             <div className="container">
               <div className="row">
@@ -101,7 +60,7 @@ class PictureBox extends React.Component {
         </section>
         <section
             id="pictures"
-            className="section green darken-2 white-text scrollspy"
+            className="move-top section green darken-2 white-text scrollspy"
         >
             <div className="container">
                 <div className="row">

@@ -33,11 +33,17 @@ class Header extends Component {
           }}
           sidenav={
             <div>
-              <li><DropDown
+              <li>
+                <DropDown
                 activeGame={activeGame}
                 clickEvent={clickEvent}
-              /></li>
+                />
               <li><FetchGameData /></li>
+              </li>
+              <li>Top Games TBD</li>
+              <li>Recent Releases TBD</li>
+
+              <li>Login with Twitch TBD</li>
             </div>
           }
         >
@@ -48,7 +54,6 @@ class Header extends Component {
                 clickEvent={clickEvent}
               />
           </NavItem>
-
          <NavItem>
               <FetchGameData />
          </NavItem>

@@ -7,7 +7,7 @@ export class BottomOfPage extends React.Component {
     render() {
         return(
             <div>
-                <nav>
+                <nav className="move-top">
                 <Footer
                     className="Playstation 5 Games"
                     copyrights="Copyright 2024 Keri Carpenter All Rights Reserved"
@@ -15,7 +15,7 @@ export class BottomOfPage extends React.Component {
                     <ul>
                     <li><a className="grey-text text-lighten-3" 
                     href="https://kericarpenterprog.github.io/calculator-ssh-app/">
-                    Calculator App as a React App</a></li>
+                    Link to a new React App</a></li>
                     <li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li>
                     </ul>}
                     moreLinks={<a className="grey-text text-lighten-4 right" href="#!"><FetchGameData /></a>}
