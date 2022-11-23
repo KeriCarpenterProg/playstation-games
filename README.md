@@ -1,4 +1,4 @@
-# Commonly used commands
+# Commonly used command for this project
 
 ### `npm run start`
 
