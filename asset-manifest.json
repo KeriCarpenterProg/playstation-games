@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/playstation-games/static/css/main.795fee14.css",
-    "main.js": "/playstation-games/static/js/main.fb0bf778.js",
+    "main.js": "/playstation-games/static/js/main.0dbf7a2b.js",
     "static/js/787.3b178e22.chunk.js": "/playstation-games/static/js/787.3b178e22.chunk.js",
     "index.html": "/playstation-games/index.html",
     "main.795fee14.css.map": "/playstation-games/static/css/main.795fee14.css.map",
-    "main.fb0bf778.js.map": "/playstation-games/static/js/main.fb0bf778.js.map",
+    "main.0dbf7a2b.js.map": "/playstation-games/static/js/main.0dbf7a2b.js.map",
     "787.3b178e22.chunk.js.map": "/playstation-games/static/js/787.3b178e22.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.795fee14.css",
-    "static/js/main.fb0bf778.js"
+    "static/js/main.0dbf7a2b.js"
   ]
 }
