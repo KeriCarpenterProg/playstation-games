@@ -38,8 +38,9 @@ class Header extends Component {
                 activeGame={activeGame}
                 clickEvent={clickEvent}
                 />
-              <li><FetchGameData /></li>
               </li>
+              <li><FetchGameData /></li>
+
               <li>Top Games TBD</li>
               <li>Recent Releases TBD</li>
 

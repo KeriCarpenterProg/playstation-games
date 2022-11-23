@@ -9,6 +9,9 @@ class App extends React.Component {
   state = {
     activeGame: 0
   }
+  componentDidMount() {
+    console.log("How to I execute what I need in FetchIGDB?");
+  }
   clickButton = (index) => {
     // console.log("I clicked the button and the index value is " + index);
     this.setState({ activeGame: index }
