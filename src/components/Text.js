@@ -19,6 +19,23 @@ class Text extends React.Component {
         <img src={value} alt={value} width="100%" />
       </div>
     ));
+    const b = games[activeGame].videos;
+    const video = b.map((value, index) => (
+      <div className="col s12 m4" key={index}>
+      <div className="video-container">
+        <iframe
+          title={games[activeGame].name}
+          width="560"
+          height="315"
+          src={value}
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope;
+            picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+      ));
     const backgroundImage = games[activeGame].screenshots[0];
     // console.log(`Background image: ${backgroundImage}`);
 
@@ -52,20 +69,7 @@ class Text extends React.Component {
       <div className="section">
         <div className="container">
           <div className="row">
-            <div className="col s12 m4">
-              <div className="video-container">
-                <iframe
-                  title={games[activeGame].name}
-                  width="560"
-                  height="315"
-                  src={games[activeGame].videos[0]}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope;
-                    picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
+            {video}
             {urls}
           </div>
         </div>
