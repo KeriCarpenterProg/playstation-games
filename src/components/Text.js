@@ -12,6 +12,8 @@ class Text extends React.Component {
   render() {
     const {activeGame} = this.props;
     const a = games[activeGame].screenshots;
+    console.log(games[activeGame].name);
+    console.log(activeGame);
     const urls = a.map((value, index) => (
       <div className="col s12 m4" key={index}>
         <img src={value} alt={value} width="100%" />

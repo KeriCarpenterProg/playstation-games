@@ -53,24 +53,7 @@ function FetchGameData() {
       var d = new Date(timestamp * 1000), // Convert the passed timestamp to milliseconds
           yyyy = d.getFullYear(),
           mm = ('0' + (d.getMonth() + 1)).slice(-2),  // Months are zero based. Add leading 0.
-          // dd = ('0' + d.getDate()).slice(-2),         // Add leading 0.
-          // hh = d.getHours(),
-          // h = hh,
-          // min = ('0' + d.getMinutes()).slice(-2),     // Add leading 0.
-          // ampm = 'AM',
           time;
-  
-      // if (hh > 12) {
-      //     h = hh - 12;
-      //     ampm = 'PM';
-      // } else if (hh === 12) {
-      //     h = 12;
-      //     ampm = 'PM';
-      // } else if (hh === 0) {
-      //     h = 12;
-      // }
-  
-      // ie: 2014-03-24, 3:00 PM
       time =  mm +'/'+ yyyy;
       return time;
   }
@@ -79,7 +62,9 @@ function FetchGameData() {
     let string = "";
     const endString=",  ";
     if(item === 48){
-      string = "Playstation 4";  
+      string = "Playstation 4"; 
+    } else if(item === 167){
+      string = "Playstation 5";    
     } else if(item === 12){
       string = "Role-playing (RPG)";
     } else if(item === 6){
@@ -158,8 +143,11 @@ function FetchGameData() {
             printGame(data[0], index);
         } else if (gameData.name === "covers") {
             // console.log(games[index].name);
+            // ToDo load in the "correct" covers
         } else if (gameData.name === "screenshots") {
+            // ToDo load in the "correct" data
         } else if (gameData.name === "game_videos") {
+            // ToDo load in the "correct" covers
         } 
         else {
           console.log("Something went wrong")
