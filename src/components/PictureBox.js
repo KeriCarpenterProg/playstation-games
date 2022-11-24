@@ -29,7 +29,7 @@ class PictureBox extends React.Component {
     ));
       return (
         <div>
-        <section className="move-top">
+        <section>
         <Slider
           fullscreen={false}
           options={{
@@ -44,7 +44,7 @@ class PictureBox extends React.Component {
         </section>
           <section
             id="carousel"
-            className="move-top section red lighten-1 white-text scrollspy"
+            className="section red lighten-1 white-text scrollspy"
           >
             <div className="container">
               <div className="row">
@@ -60,7 +60,7 @@ class PictureBox extends React.Component {
         </section>
         <section
             id="pictures"
-            className="move-top section green darken-2 white-text scrollspy"
+            className="section green darken-2 white-text scrollspy"
         >
             <div className="container">
                 <div className="row">

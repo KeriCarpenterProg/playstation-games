@@ -1,13 +1,12 @@
 import React from 'react';
 import { Footer } from "react-materialize";
 import 'materialize-css/dist/css/materialize.min.css';
-import FetchGameData from './FetchGameData';
 
 export class BottomOfPage extends React.Component {
     render() {
         return(
             <div>
-                <nav className="move-top">
+                <nav>
                 <Footer
                     className="Playstation 5 Games"
                     copyrights="Copyright 2024 Keri Carpenter All Rights Reserved"
@@ -15,10 +14,9 @@ export class BottomOfPage extends React.Component {
                     <ul>
                     <li><a className="grey-text text-lighten-3" 
                     href="https://kericarpenterprog.github.io/calculator-ssh-app/">
-                    Link to a new React App</a></li>
+                    Link to another React App</a></li>
                     <li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li>
                     </ul>}
-                    moreLinks={<a className="grey-text text-lighten-4 right" href="#!"><FetchGameData /></a>}
                     >
                     <h5 className="white-text">
                         Footer Content

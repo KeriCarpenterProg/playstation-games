@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Icon, Navbar, NavItem } from "react-materialize";
-import FetchGameData from "./FetchGameData";
 import DropDown from "./Dropdown";
 
 class Header extends Component {
@@ -39,7 +38,8 @@ class Header extends Component {
                 clickEvent={clickEvent}
                 />
               </li>
-              <li><FetchGameData /></li>
+              {/* This is the button to load data.  I took it out. */}
+              {/* <li><FetchGameData /></li> */}
 
               <li>Top Games TBD</li>
               <li>Recent Releases TBD</li>
@@ -55,9 +55,10 @@ class Header extends Component {
                 clickEvent={clickEvent}
               />
           </NavItem>
-         <NavItem>
+        {/* This button was before I loaded in componentDidMount.  Taken out. */}
+         {/* <NavItem>
               <FetchGameData />
-         </NavItem>
+         </NavItem> */}
         </Navbar>
       </div>
     );

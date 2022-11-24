@@ -2,15 +2,15 @@ import React from 'react';
 import "./App.css";
 import Header from "./components/Header";
 import Text from './components/Text';
-import PictureBox from './components/PictureBox';
-import BottomOfPage from './components/BottomOfPage';
+import { callFourEndpoints } from './components/FetchGameData';
 
 class App extends React.Component {
   state = {
     activeGame: 0
   }
   componentDidMount() {
-    console.log("How to I execute what I need in FetchIGDB?");
+    callFourEndpoints().then(this.setState({ loaded: true }));
+    
   }
   clickButton = (index) => {
     // console.log("I clicked the button and the index value is " + index);
@@ -21,7 +21,7 @@ class App extends React.Component {
   }
   
   render() {
-    const {activeGame} = this.state;
+    const {activeGame, loaded } = this.state;
 
     return (
       <div className="App">
@@ -29,10 +29,8 @@ class App extends React.Component {
           activeGame={activeGame}
           clickEvent={this.clickButton}
         />
-
         <Text activeGame={activeGame} />
-        <PictureBox activeGame={activeGame}/>
-        <BottomOfPage />
+        
       </div>
     );
   }

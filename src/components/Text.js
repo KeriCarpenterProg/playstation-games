@@ -1,5 +1,7 @@
 import React from "react";
-import games from "../utils/helpers"
+import games from "../utils/helpers";
+import PictureBox from './PictureBox';
+import BottomOfPage from './BottomOfPage';
 
 class Text extends React.Component {
   state = {
@@ -12,8 +14,6 @@ class Text extends React.Component {
   render() {
     const {activeGame} = this.props;
     const a = games[activeGame].screenshots;
-    console.log(games[activeGame].name);
-    console.log(activeGame);
     const urls = a.map((value, index) => (
       <div className="col s12 m4" key={index}>
         <img src={value} alt={value} width="100%" />
@@ -48,7 +48,8 @@ class Text extends React.Component {
         </div>
       </div>
       </div>
-      <div className="section move-top">
+      <div className="move-top">
+      <div className="section">
         <div className="container">
           <div className="row">
             <div className="col s12 m4">
@@ -57,7 +58,7 @@ class Text extends React.Component {
                   title={games[activeGame].name}
                   width="560"
                   height="315"
-                  src={games[activeGame].video}
+                  src={games[activeGame].videos[0]}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope;
                     picture-in-picture"
@@ -68,6 +69,9 @@ class Text extends React.Component {
             {urls}
           </div>
         </div>
+      </div>
+      <PictureBox activeGame={activeGame}/>
+      <BottomOfPage />
       </div>
       </div>
     );
