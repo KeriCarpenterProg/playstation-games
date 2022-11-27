@@ -41,42 +41,46 @@ class Text extends React.Component {
 
     return (
       <div>
-      <div className="wrapper">
-      <div className="parallax-background" 
-        style={{
-        backgroundImage:
-        `url(${backgroundImage})`
-        }}>
-      </div>
-      <div className="section move-top">
-        <div className="container">
-          <div className="row">
-            <div className="col s12 m4">
-            <img src={games[activeGame].cover} alt={games[activeGame].name} width="100%"></img>
+        <div className="wrapper">
+          <div
+            className="parallax-background"
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+            }}
+          ></div>
+          <div className="section move-top">
+            <div className="container">
+              <div className="row">
+                <div className="col s12 m4">
+                  <img
+                    src={games[activeGame].cover}
+                    alt={games[activeGame].name}
+                    width="100%"
+                  ></img>
+                </div>
+                <div className="col s12 m8 white-text white-transparent">
+                  <h1>{games[activeGame].name}</h1>
+                  <p>{games[activeGame].summary}</p>
+                  <p>Release Date: {games[activeGame].release}</p>
+                  <p>Platforms: {games[activeGame].platforms}</p>
+                  <p>Genre: {games[activeGame].genre}</p>
+                </div>
+              </div>
             </div>
-          <div className="col s12 m8 white-text white-transparent">
-            <h1>{games[activeGame].name}</h1>
-            <p>{games[activeGame].summary}</p>
-            <p>Release Date: {games[activeGame].release}</p>
-            <p>Platforms: {games[activeGame].platforms}</p>
-            <p>Genre: {games[activeGame].genre}</p>
           </div>
         </div>
-        </div>
-      </div>
-      </div>
-      <div className="move-top">
-      <div className="section">
-        <div className="container">
-          <div className="row">
-            {video}
-            {urls}
+        <div className="move-top">
+          <div className="section">
+            <div className="container">
+              <div className="row">
+                {video}
+                {urls}
+              </div>
+            </div>
           </div>
+          <PictureBox activeGame={activeGame} />
+          <BottomOfPage />
         </div>
-      </div>
-      <PictureBox activeGame={activeGame}/>
-      <BottomOfPage />
-      </div>
       </div>
     );
   }
