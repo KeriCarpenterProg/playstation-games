@@ -38,10 +38,11 @@ class Header extends Component {
                 clickEvent={clickEvent}
                 />
               </li>
-              {/* This is the button to load data.  I took it out. */}
+              {/* This was the button to load data.  I took it out
+              because I am now loading in componentDidMount on load */}
               {/* <li><FetchGameData /></li> */}
-
-              <li>Top Games TBD</li>
+              <li><a href="./pages/games/games.html">Games Info</a>  </li>
+              <li><a href="index.html">Top Games</a></li>
               <li>Recent Releases TBD</li>
 
               <li>Login with Twitch TBD</li>
