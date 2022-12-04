@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-// import Text from "./components/Text";
+import Text from "./components/Text";
 import SlickSlider from "./components/SlickSlider";
 import { callFourEndpoints } from "./components/FetchGameData";
 
@@ -27,8 +27,8 @@ class App extends React.Component {
       <div className="App">
         {/* Taking this out for the moment. */}
         <Header activeGame={activeGame} clickEvent={this.clickButton} />
-        {/* <Text activeGame={activeGame} /> */}
         <SlickSlider />
+        <Text activeGame={activeGame} />
       </div>
     );
   }
