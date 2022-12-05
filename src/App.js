@@ -28,19 +28,18 @@ class App extends React.Component {
       <div className="App">
         {/* Taking this out for the moment. */}
         <Header activeGame={activeGame} clickEvent={this.clickButton} />
-        <SlickSlider />
-        <Text activeGame={activeGame} />
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-            <br></br>
-            <Link to="/games">Games</Link>
-            <h1 className="black-text">Hello 1</h1>
-          </li>
-        </ul>
+        <h5 className="black-text">
+          <Link to="/">Popular Games</Link>
+        </h5>
+        <h5 className="black-text">
+          <Link to="/games">Single Game</Link>
+        </h5>
         <Routes>
-          <Route path="/" element={<h1>Hello from path</h1>} />
-          <Route path="/games" element={<h1>GAMES!!!!</h1>}></Route>
+          <Route path="/" element={<SlickSlider />} />
+          <Route
+            path="/games"
+            element={<Text activeGame={activeGame} />}
+          ></Route>
         </Routes>
       </div>
     );
