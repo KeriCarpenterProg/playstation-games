@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Text from "./components/Text";
@@ -29,6 +30,18 @@ class App extends React.Component {
         <Header activeGame={activeGame} clickEvent={this.clickButton} />
         <SlickSlider />
         <Text activeGame={activeGame} />
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+            <br></br>
+            <Link to="/games">Games</Link>
+            <h1 className="black-text">Hello 1</h1>
+          </li>
+        </ul>
+        <Routes>
+          <Route path="/" element={<h1>Hello from path</h1>} />
+          <Route path="/games" element={<h1>GAMES!!!!</h1>}></Route>
+        </Routes>
       </div>
     );
   }
