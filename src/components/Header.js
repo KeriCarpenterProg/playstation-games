@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Icon, Navbar, NavItem } from "react-materialize";
 import DropDown from "./Dropdown";
 
 class Header extends Component {
   render() {
-    const {activeGame} = this.props;
-    const {clickEvent} = this.props;
+    const { activeGame } = this.props;
+    const { clickEvent } = this.props;
     return (
       <div>
         <Navbar
@@ -13,9 +14,9 @@ class Header extends Component {
           centerLogo={true}
           alignLinks="right"
           brand={
-            <a className="brand-logo" href="#1">
-              PlayStation Games
-            </a>
+            <div className="brand-logo">
+              <Link to="/">Playstation Games</Link>
+            </div>
           }
           id="mobile-nav"
           menuIcon={<Icon>menu</Icon>}
@@ -32,32 +33,33 @@ class Header extends Component {
           }}
           sidenav={
             <div>
-              <li>
-                <DropDown
-                activeGame={activeGame}
-                clickEvent={clickEvent}
-                />
-              </li>
+              <li>Choose List of Games or View Single Game</li>
               {/* This was the button to load data.  I took it out
               because I am now loading in componentDidMount on load */}
               {/* <li><FetchGameData /></li> */}
-              <li><a href="./pages/games/games.html">Games Info</a>  </li>
-              <li><a href="index.html">Top Games</a></li>
-              <li>Recent Releases TBD</li>
+              <li>
+                <Link to="/">Top Playstation Games</Link>
+              </li>
+              <li>
+                <Link to="/games">Single PS5 Game</Link>
+              </li>
+              <li>
+                <DropDown activeGame={activeGame} clickEvent={clickEvent} />
+              </li>
+              <li>Recent Releases ToDo</li>
 
-              <li>Login with Twitch TBD</li>
+              <li>Login with Twitch ToDo</li>
             </div>
           }
         >
-
           <NavItem>
-              <DropDown
-                currentIndex={activeGame}
-                clickEvent={clickEvent}
-              />
+            <Link to="/games">Game</Link>
           </NavItem>
-        {/* This button was before I loaded in componentDidMount.  Taken out. */}
-         {/* <NavItem>
+          <NavItem>
+            <DropDown currentIndex={activeGame} clickEvent={clickEvent} />
+          </NavItem>
+          {/* This button was before I loaded in componentDidMount.  Taken out. */}
+          {/* <NavItem>
               <FetchGameData />
          </NavItem> */}
         </Navbar>
