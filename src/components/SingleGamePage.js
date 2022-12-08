@@ -2,7 +2,7 @@ import React from "react";
 import games from "../utils/helpers";
 import PictureBox from "./PictureBox";
 
-class SingleGameInfo extends React.Component {
+class SingleGamePage extends React.Component {
   state = {
     screenshots: [],
     name: "",
@@ -84,4 +84,4 @@ class SingleGameInfo extends React.Component {
   }
 }
 
-export default SingleGameInfo;
+export default SingleGamePage;

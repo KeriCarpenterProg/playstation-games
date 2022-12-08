@@ -2,12 +2,11 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Text from "./components/SingleGameInfo";
 import BottomMiddle from "./components/BottomMiddle";
 import SlickSlider from "./components/SlickSlider";
 import { callFourEndpoints } from "./components/FetchGameData";
 import BottomOfPage from "./components/BottomOfPage";
-import SingleGameInfo from "./components/SingleGameInfo";
+import SingleGamePage from "./components/SingleGamePage";
 
 class App extends React.Component {
   state = {
@@ -31,12 +30,12 @@ class App extends React.Component {
       <div className="App">
         <Header activeGame={activeGame} clickEvent={this.clickButton} />
         <Routes>
+          <Route path="*" element={<SlickSlider />} />
           <Route path="/" element={<SlickSlider />}></Route>
           <Route
             path="/games"
-            element={<SingleGameInfo activeGame={activeGame} />}
+            element={<SingleGamePage activeGame={activeGame} />}
           ></Route>
-          <Route path="*" element={<SlickSlider />} />
         </Routes>
         <BottomMiddle />
         <BottomOfPage />

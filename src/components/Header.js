@@ -53,7 +53,7 @@ class Header extends Component {
           }
         >
           <NavItem>
-            <Link to="/games">Single Game Page</Link>
+            <Link to="/games">Game</Link>
           </NavItem>
           <NavItem>
             <DropDown currentIndex={activeGame} clickEvent={clickEvent} />
