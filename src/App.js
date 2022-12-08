@@ -1,10 +1,13 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Text from "./components/Text";
+import Text from "./components/SingleGameInfo";
+import BottomMiddle from "./components/BottomMiddle";
 import SlickSlider from "./components/SlickSlider";
 import { callFourEndpoints } from "./components/FetchGameData";
+import BottomOfPage from "./components/BottomOfPage";
+import SingleGameInfo from "./components/SingleGameInfo";
 
 class App extends React.Component {
   state = {
@@ -14,33 +17,29 @@ class App extends React.Component {
     callFourEndpoints().then(this.setState({ loaded: true }));
   }
   clickButton = (index) => {
-    // console.log("I clicked the button and the index value is " + index);
+    console.log("I clicked the button and the index value is " + index);
     this.setState(
       { activeGame: index }
       // , () =>
       // console.log("This is the value of activeGame " + this.state.activeGame)
     );
   };
-
+  // I had put "{ activeGame, loaded }" in before but it looks like its not needed
   render() {
-    const { activeGame, loaded } = this.state;
+    const { activeGame } = this.state;
     return (
       <div className="App">
-        {/* Taking this out for the moment. */}
         <Header activeGame={activeGame} clickEvent={this.clickButton} />
-        <h5 className="black-text">
-          <Link to="/">Popular Games</Link>
-        </h5>
-        <h5 className="black-text">
-          <Link to="/games">Single Game</Link>
-        </h5>
         <Routes>
-          <Route path="/" element={<SlickSlider />} />
+          <Route path="/" element={<SlickSlider />}></Route>
           <Route
             path="/games"
-            element={<Text activeGame={activeGame} />}
+            element={<SingleGameInfo activeGame={activeGame} />}
           ></Route>
+          <Route path="*" element={<SlickSlider />} />
         </Routes>
+        <BottomMiddle />
+        <BottomOfPage />
       </div>
     );
   }

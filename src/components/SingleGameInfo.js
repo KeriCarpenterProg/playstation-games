@@ -1,9 +1,8 @@
 import React from "react";
 import games from "../utils/helpers";
-import PictureBox from './PictureBox';
-import BottomOfPage from './BottomOfPage';
+import PictureBox from "./PictureBox";
 
-class Text extends React.Component {
+class SingleGameInfo extends React.Component {
   state = {
     screenshots: [],
     name: "",
@@ -12,7 +11,7 @@ class Text extends React.Component {
   };
 
   render() {
-    const {activeGame} = this.props;
+    const { activeGame } = this.props;
     const a = games[activeGame].screenshots;
     const urls = a.map((value, index) => (
       <div className="col s12 m4" key={index}>
@@ -22,20 +21,20 @@ class Text extends React.Component {
     const b = games[activeGame].videos;
     const video = b.map((value, index) => (
       <div className="col s12 m4" key={index}>
-      <div className="video-container">
-        <iframe
-          title={games[activeGame].name}
-          width="560"
-          height="315"
-          src={value}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope;
+        <div className="video-container">
+          <iframe
+            title={games[activeGame].name}
+            width="560"
+            height="315"
+            src={value}
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope;
             picture-in-picture"
-          allowFullScreen
-        ></iframe>
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
-    </div>
-      ));
+    ));
     const backgroundImage = games[activeGame].screenshots[0];
     // console.log(`Background image: ${backgroundImage}`);
 
@@ -79,11 +78,10 @@ class Text extends React.Component {
             </div>
           </div>
           <PictureBox activeGame={activeGame} />
-          <BottomOfPage />
         </div>
       </div>
     );
   }
 }
 
-export default Text;
+export default SingleGameInfo;
