@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/slickstyle.css";
 
-class SlickSlider extends React.Component {
+class PopularGamesSlider extends React.Component {
   render() {
     // Slick Slider Settings ----> Begin
     const settings = {
@@ -71,4 +71,4 @@ class SlickSlider extends React.Component {
   }
 }
 
-export default SlickSlider;
+export default PopularGamesSlider;

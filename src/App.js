@@ -3,10 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import BottomMiddle from "./components/BottomMiddle";
-import SlickSlider from "./components/SlickSlider";
 import { callFourEndpoints } from "./components/FetchGameData";
 import BottomOfPage from "./components/BottomOfPage";
 import SingleGamePage from "./components/SingleGamePage";
+import PopularGamesSlider from "./components/PopularGamesSlider";
 
 class App extends React.Component {
   state = {
@@ -30,8 +30,8 @@ class App extends React.Component {
       <div className="App">
         <Header activeGame={activeGame} clickEvent={this.clickButton} />
         <Routes>
-          <Route path="*" element={<SlickSlider />} />
-          <Route path="/" element={<SlickSlider />}></Route>
+          <Route path="*" element={<PopularGamesSlider />} />
+          <Route path="/" element={<PopularGamesSlider />}></Route>
           <Route
             path="/games"
             element={<SingleGamePage activeGame={activeGame} />}
