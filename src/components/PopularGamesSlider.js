@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/slickstyle.css";
+import RecentGamesList from "./RecentGamesList";
 
 class PopularGamesSlider extends React.Component {
   render() {
@@ -66,6 +67,7 @@ class PopularGamesSlider extends React.Component {
             </div>
           </div>
         </div>
+        <RecentGamesList />
       </div>
     );
   }

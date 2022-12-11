@@ -15,7 +15,7 @@ class App extends React.Component {
   componentDidMount() {
     callFourEndpoints().then(this.setState({ loaded: true }));
   }
-  clickButton = (index) => {
+  clickEvent = (index) => {
     console.log("I clicked the button and the index value is " + index);
     this.setState(
       { activeGame: index }
@@ -28,7 +28,7 @@ class App extends React.Component {
     const { activeGame } = this.state;
     return (
       <div className="App">
-        <Header activeGame={activeGame} clickEvent={this.clickButton} />
+        <Header activeGame={activeGame} clickEvent={this.clickEvent} />
         <Routes>
           <Route path="*" element={<PopularGamesSlider />} />
           <Route path="/" element={<PopularGamesSlider />}></Route>

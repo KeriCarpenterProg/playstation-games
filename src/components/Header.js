@@ -58,10 +58,6 @@ class Header extends Component {
           <NavItem>
             <DropDown currentIndex={activeGame} clickEvent={clickEvent} />
           </NavItem>
-          {/* This button was before I loaded in componentDidMount.  Taken out. */}
-          {/* <NavItem>
-              <FetchGameData />
-         </NavItem> */}
         </Navbar>
       </div>
     );
