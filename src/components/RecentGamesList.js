@@ -7,15 +7,21 @@ class RecentGamesList extends React.Component {
     const a = games.map((game) => (
       <>
         <div className="col s2 m2 l2">
-          <img width="100%" src={game.cover} alt={game.id} />
+          <Link to={`/games/${game.id}`}>
+            <img width="100%" src={game.cover} alt={game.id} />
+          </Link>
         </div>
+
         <div className="container">
-          <div className="row">
-            <div className="col s10 m10 l10">{game.name}</div>
-            <div className="col s10 m10 l10">{game.release}</div>
-            <div className="col s10 m10 l10">{game.genre}</div>
-            <div className="col s10 m10 l10">Game Id = {game.game_id}</div>
-          </div>
+          <Link to={`/games/${game.id}`}>
+            <div className="row">
+              <div className="col s10 m10 l10">{game.name}</div>
+              <div className="col s10 m10 l10">{game.release}</div>
+              <div className="col s10 m10 l10">Genre = {game.genre}</div>
+              <div className="col s10 m10 l10">ActiveGame = {game.id}</div>
+              <div className="col s10 m10 l10">Game Id = {game.game_id}</div>
+            </div>
+          </Link>
         </div>
       </>
     ));
@@ -25,20 +31,7 @@ class RecentGamesList extends React.Component {
           <div className="container">
             <div className="row">
               <h5>Recently Released</h5>
-              <p>---------------</p>
-              <div className="col s2 m2 l2">
-                <img width="100%" src={games[1].cover} alt={games[1].id} />
-              </div>
-              <div className="container">
-                <div className="row">
-                  <div className="col s10 m10 l10">{games[1].name}</div>
-                  <div className="col s10 m10 l10">{games[1].release}</div>
-                  <div className="col s10 m10 l10">{games[1].genre}</div>
-                  <div className="col s10 m10 l10">
-                    Game Id = {games[1].game_id}
-                  </div>
-                </div>
-              </div>
+              <p>-----------------------------</p>
               {a}
             </div>
           </div>

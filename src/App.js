@@ -6,7 +6,9 @@ import BottomMiddle from "./components/BottomMiddle";
 import { callFourEndpoints } from "./components/FetchGameData";
 import BottomOfPage from "./components/BottomOfPage";
 import SingleGamePage from "./components/SingleGamePage";
-import PopularGamesSlider from "./components/PopularGamesSlider";
+import { SingleGamePage2 } from "./components/SingleGamePage2";
+import { HomePage } from "./components/HomePage";
+import { Nav } from "./components/Nav";
 
 class App extends React.Component {
   state = {
@@ -28,13 +30,18 @@ class App extends React.Component {
     const { activeGame } = this.state;
     return (
       <div className="App">
-        <Header activeGame={activeGame} clickEvent={this.clickEvent} />
+        <Nav />
+        {/* <Header activeGame={activeGame} clickEvent={this.clickEvent} /> */}
         <Routes>
-          <Route path="*" element={<PopularGamesSlider />} />
-          <Route path="/" element={<PopularGamesSlider />}></Route>
+          <Route path="*" element={<HomePage />} />
+          <Route path="/" element={<HomePage />}></Route>
           <Route
             path="/games"
             element={<SingleGamePage activeGame={activeGame} />}
+          ></Route>
+          <Route
+            path="/games/:activeGame"
+            element={<SingleGamePage2 />}
           ></Route>
         </Routes>
         <BottomMiddle />

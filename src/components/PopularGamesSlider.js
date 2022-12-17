@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/slickstyle.css";
-import RecentGamesList from "./RecentGamesList";
 
 class PopularGamesSlider extends React.Component {
   render() {
@@ -51,11 +50,11 @@ class PopularGamesSlider extends React.Component {
         <div className="section">
           <div className="container">
             <div className="row">
-              <h5>Popular PS5 Games right now</h5>
+              <h5>Popular Playstation 5 Games</h5>
               <div className="slick-slider-wrapper">
                 <Slider {...settings}>
                   {games.map((i) => (
-                    <Link to="/games">
+                    <Link to={`/games/${i.id}`}>
                       <div className="card" key={i}>
                         <img src={i.cover} alt={i.name} />
                         <h5>{i.name}</h5>
@@ -67,7 +66,6 @@ class PopularGamesSlider extends React.Component {
             </div>
           </div>
         </div>
-        <RecentGamesList />
       </div>
     );
   }

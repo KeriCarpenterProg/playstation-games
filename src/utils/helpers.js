@@ -1,6 +1,7 @@
 let games = [
   {
     name: "God of War Ragnarok",
+    id: 0,
     game_id: "112875",
     release: "data not loaded",
     genre: "data not loaded",
@@ -11,13 +12,12 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/scd720.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/scd71x.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/scd71y.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_original/scd71v.jpg",      
+      "https://images.igdb.com/igdb/image/upload/t_original/scd71v.jpg",
     ],
-    videos: [
-      "https://www.youtube.com/embed/g1wr0DfV73E",
-    ],
+    videos: ["https://www.youtube.com/embed/g1wr0DfV73E"],
   },
   {
+    id: 1,
     name: "Minecraft: Playstation 4 Edition",
     game_id: "93620",
     release: "Haven't looked",
@@ -36,11 +36,10 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/diq3mxcap0gnbbgeqpwg.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/o5ibznm0jhxvumujptuv.jpg",
     ],
-    videos: [
-        "https://www.youtube.com/embed/1DhWXAiNgfQ",
-       ],
+    videos: ["https://www.youtube.com/embed/1DhWXAiNgfQ"],
   },
   {
+    id: 2,
     name: "Marvel's Spider Man",
     game_id: "19565",
     release: "7th September, 2018",
@@ -58,11 +57,10 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/sc6khu.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/sc6khx.jpg",
     ],
-    videos: [
-          "https://www.youtube.com/embed/q4GdJVvdxss",
-        ],
+    videos: ["https://www.youtube.com/embed/q4GdJVvdxss"],
   },
   {
+    id: 3,
     name: "God of War",
     game_id: "19560",
     release: "20th April 2018",
@@ -78,11 +76,10 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/o4mg2wvhlcikaogvvzqe.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/gpt3d0gpue5mat4kkso6.jpg",
     ],
-    videos: [
-          "https://www.youtube.com/embed/rClXqZD2Xrs",
-        ],
+    videos: ["https://www.youtube.com/embed/rClXqZD2Xrs"],
   },
   {
+    id: 4,
     name: "Death Stranding",
     game_id: "19564",
     release: "20th November 2019",
@@ -99,11 +96,10 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/sc6l0a.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/sc6l0c.jpg",
     ],
-    videos: [
-        "https://www.youtube.com/embed/tCI396HyhbQ",
-        ],
+    videos: ["https://www.youtube.com/embed/tCI396HyhbQ"],
   },
   {
+    id: 5,
     name: "Call of Duty",
     game_id: "83727",
     release: "25th October 2019",
@@ -119,9 +115,10 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/bofvxbntojlvpwueihdg.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/yyynkripplx43svs9ifw.jpg",
     ],
-    videos: ["https://www.youtube.com/embed/3pyfKYwlGhQ",],
+    videos: ["https://www.youtube.com/embed/3pyfKYwlGhQ"],
   },
   {
+    id: 6,
     name: "Uncharted",
     game_id: "7331",
     release: "Haven't looked",
@@ -137,10 +134,9 @@ let games = [
       "https://images.igdb.com/igdb/image/upload/t_original/rtu8k7vm5x4mw5hilh2z.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/yyynkripplx43svs9ifw.jpg",
     ],
-    videos: ["https://www.youtube.com/embed/3pyfKYwlGhQ",],
+    videos: ["https://www.youtube.com/embed/3pyfKYwlGhQ"],
   },
+  { id: 7, game_id: "26192" },
 ];
-
-
 
 export default games;
