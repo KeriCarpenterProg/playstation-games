@@ -1,13 +1,14 @@
 let games = [
   {
-    name: "God of War Ragnarok",
+    name: "God of War Ragnarök",
     id: 0,
     game_id: "112875",
-    release: "data not loaded",
-    genre: "data not loaded",
-    platforms: "PS5",
-    summary: "Data Not loaded",
-    cover: "https://images.igdb.com/igdb/image/upload/t_original/co1ur4.jpg",
+    release: 1667952000,
+    genre: [25, 31],
+    platforms: [48, 167],
+    summary:
+      "God of War: Ragnarök is the ninth installment in the God of War series and the sequel to 2018's God of War. Continuing with the Norse mythology theme, the game is set in ancient Norway and feature series protagonists Kratos, the former Greek God of War, and his young son Atreus. The game is expected to kick off the events of Ragnarök, where Kratos and Atreus must journey to each of the Nine Realms in search of answers as they prepare for the prophesied battle that will end the world.",
+    cover: "https://images.igdb.com/igdb/image/upload/t_original/co5s5v.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/scd720.jpg",
       "https://images.igdb.com/igdb/image/upload/t_original/scd71x.jpg",
@@ -20,11 +21,11 @@ let games = [
     id: 1,
     name: "Minecraft: Playstation 4 Edition",
     game_id: "93620",
-    release: "Haven't looked",
-    genre: "Shooter",
-    platforms: "PS4",
+    release: 1409788800,
+    genre: [31],
+    platforms: [48],
     summary:
-      "Data from IGDB has not been loaded.  The critically acclaimed Minecraft comes to PlayStation 4. Create your very own game world and explore, build and conquer.",
+      "The critically acclaimed Minecraft comes to PlayStation 4. Create your very own game world and explore, build and conquer.",
     cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ur4.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/f0mtqk9zdqoulrf0nfzu.jpg",
@@ -42,10 +43,11 @@ let games = [
     id: 2,
     name: "Marvel's Spider Man",
     game_id: "19565",
-    release: "7th September, 2018",
-    genre: "Adventure",
-    platforms: "PS4",
-    summary: "Game based on the Spider Man movies with Peter Parker.",
+    release: 1536278400,
+    genre: [25, 31],
+    platforms: [48],
+    summary:
+      "Starring the world’s most iconic Super Hero, Spider-Man features the acrobatic abilities, improvisation and web-slinging that the wall-crawler is famous for, while also introducing elements never-before-seen in a Spider-Man game. From traversing with parkour and utilizing the environment, to new combat and blockbuster set pieces, it’s Spider-Man unlike any you’ve played before.",
     cover: "https://images.igdb.com/igdb/image/upload/t_original/co1r77.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/sc6khp.jpg",
@@ -63,10 +65,11 @@ let games = [
     id: 3,
     name: "God of War",
     game_id: "19560",
-    release: "20th April 2018",
-    genre: "Adventure, Role-playing(RPG)",
-    platforms: "PS4",
-    summary: "An adventure games with Kratos and his son.",
+    release: 1524182400,
+    genre: [12, 25, 31],
+    platforms: [6, 48],
+    summary:
+      "God of War is the sequel to God of War III as well as a continuation of the canon God of War chronology. Unlike previous installments, this game focuses on Norse mythology and follows an older and more seasoned Kratos and his son Atreus in the years since the third game. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
     cover: "https://images.igdb.com/igdb/image/upload/t_original/co1tmu.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/mknszfnaifmhssbrmkpl.jpg",
@@ -82,11 +85,11 @@ let games = [
     id: 4,
     name: "Death Stranding",
     game_id: "19564",
-    release: "20th November 2019",
-    genre: "Adventure, Role-playing(RPG)",
-    platforms: "PS4",
+    release: 1573171200,
+    genre: [5, 31],
+    platforms: [6, 48],
     summary:
-      "A really famous game with alot of big name actors and the likeness from that guy from Walking Dead.",
+      "From legendary game creator Hideo Kojima comes an all-new, genre-defying open world action adventure, starring Norman Reedus, Mads Mikkelsen, Léa Seydoux and Lindsay Wagner.\n\nIn the near future, mysterious explosions have rocked the globe, setting off a series of supernatural events known as the Death Stranding. With otherworldly creatures plaguing the landscape, and mass extinction imminent, it’s up to Sam Porter Bridges to travel across the ravaged wasteland and save humanity from impending annihilation.",
     cover: "https://images.igdb.com/igdb/image/upload/t_original/co1syk.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/ot22cc6wsmhbrcnuo8ti.jpg",
@@ -100,12 +103,13 @@ let games = [
   },
   {
     id: 5,
-    name: "Call of Duty",
+    name: "Call of Duty: Black Ops 4",
     game_id: "83727",
-    release: "25th October 2019",
-    genre: "Shooter",
-    platforms: "PS4",
-    summary: "One of the ultimate shoot em up games.",
+    release: 1539302400,
+    genre: [5],
+    platforms: [6, 48, 49],
+    summary:
+      "Black Ops is back! Featuring gritty, grounded, fluid Multiplayer combat, the biggest Zombies offering ever with three full undead adventures at launch, and Blackout, where the universe of Black Ops comes to life in one massive battle royale experience featuring the largest map in Call of Duty history, signature Black Ops combat, characters, locations and weapons from the entire Black Ops series.",
     cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wkf.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/sc6qen.jpg",
@@ -121,10 +125,11 @@ let games = [
     id: 6,
     name: "Uncharted",
     game_id: "7331",
-    release: "Haven't looked",
-    genre: "Fantasy",
-    platforms: "PS4",
-    summary: "Data from IGDB has not been loaded.",
+    release: 1462838400,
+    genre: [5, 31],
+    platforms: [48],
+    summary:
+      "Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he's willing to sacrifice to save the ones he loves.",
     cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7h.jpg",
     screenshots: [
       "https://images.igdb.com/igdb/image/upload/t_original/fn1wbuvikoacxt4zvfxl.jpg",
@@ -136,7 +141,40 @@ let games = [
     ],
     videos: ["https://www.youtube.com/embed/3pyfKYwlGhQ"],
   },
-  { id: 7, game_id: "26192" },
+  {
+    id: 7,
+    game_id: "26192",
+    name: "The Last of Us Part II",
+    release: 1592524800,
+    genre: [5, 31],
+    platforms: [48],
+    summary:
+      "Set 5 years after the events of The Last of Us, we see the return of Joel and Ellie. Driven by hatred, Ellie sets out for Seattle to serve justice. However, she begins to wonder what justice really means.",
+    cover: "https://images.igdb.com/igdb/image/upload/t_cover_big/co5xff.jpg",
+    screenshots: [
+      "https://images.igdb.com/igdb/image/upload/t_original/rqr5dxxw97zikyhdn2tq.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/kazgjykzu18dhqjpspko.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8i94.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8i96.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8i93.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8i95.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/sc8i97.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/oh8a5shtmdbqx73cv765.jpg",
+      "https://images.igdb.com/igdb/image/upload/t_original/rdonk4uvyh8ijanrbs46.jpg",
+    ],
+    videos: [
+      "https://www.youtube.com/embed/jziBvTUdCB0",
+      "https://www.youtube.com/embed/gF1EQAtaZEo",
+      "https://www.youtube.com/embed/ArAdN5ilVRs",
+      "https://www.youtube.com/embed/II5UsqP2JAk",
+      "https://www.youtube.com/embed/t-BUJoqZRsw",
+      "https://www.youtube.com/embed/mRj3B3GY9KM",
+      "https://www.youtube.com/embed/muniWyT4vTg",
+      "https://www.youtube.com/embed/HfxOtvmpsM8",
+    ],
+  },
+  // { id: 8, game_id: "154986", name: "Fifa 22" },
+  // { id: 9, game_id: "75235", name: "Ghosts of Tsushima" },
 ];
 
 export default games;

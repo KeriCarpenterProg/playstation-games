@@ -8,13 +8,13 @@ export function SingleGamePage2() {
   const backgroundImage = games[activeGame].screenshots[0];
   const a = games[activeGame].screenshots;
   const screenshots = a.map((screenshot, index) => (
-    <div className="col s12 m4" key={index}>
+    <div className="col-4" key={index}>
       <img src={screenshot} alt={screenshot} width="100%" />
     </div>
   ));
   const b = games[activeGame].videos;
   const videos = b.map((value, index) => (
-    <div className="col s12 m4" key={index}>
+    <div className="col-4" key={index}>
       <div className="video-container">
         <iframe
           title={games[activeGame].name}

@@ -1,20 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
 import BottomMiddle from "./components/BottomMiddle";
 import { callFourEndpoints } from "./components/FetchGameData";
 import BottomOfPage from "./components/BottomOfPage";
-import SingleGamePage from "./components/SingleGamePage";
 import { SingleGamePage2 } from "./components/SingleGamePage2";
 import { HomePage } from "./components/HomePage";
-import { Nav } from "./components/Nav";
+import { Nav } from "./components/Navigation";
 
 class App extends React.Component {
-  state = {
-    activeGame: 0,
-  };
+  state = {};
   componentDidMount() {
+    console.log("It's going to call callFourEndpoints");
     callFourEndpoints().then(this.setState({ loaded: true }));
   }
   clickEvent = (index) => {
@@ -25,9 +22,7 @@ class App extends React.Component {
       // console.log("This is the value of activeGame " + this.state.activeGame)
     );
   };
-  // I had put "{ activeGame, loaded }" in before but it looks like its not needed
   render() {
-    const { activeGame } = this.state;
     return (
       <div className="App">
         <Nav />
@@ -35,10 +30,6 @@ class App extends React.Component {
         <Routes>
           <Route path="*" element={<HomePage />} />
           <Route path="/" element={<HomePage />}></Route>
-          <Route
-            path="/games"
-            element={<SingleGamePage activeGame={activeGame} />}
-          ></Route>
           <Route
             path="/games/:activeGame"
             element={<SingleGamePage2 />}

@@ -4,26 +4,24 @@ import { Link } from "react-router-dom";
 
 class RecentGamesList extends React.Component {
   render() {
-    const a = games.map((game) => (
-      <>
-        <div className="col s2 m2 l2">
+    const a = games.map((game, index) => (
+      <React.Fragment key={index}>
+        <div className="col-3">
           <Link to={`/games/${game.id}`}>
             <img width="100%" src={game.cover} alt={game.id} />
           </Link>
         </div>
 
-        <div className="container">
+        <div className="col-9">
           <Link to={`/games/${game.id}`}>
-            <div className="row">
-              <div className="col s10 m10 l10">{game.name}</div>
-              <div className="col s10 m10 l10">{game.release}</div>
-              <div className="col s10 m10 l10">Genre = {game.genre}</div>
-              <div className="col s10 m10 l10">ActiveGame = {game.id}</div>
-              <div className="col s10 m10 l10">Game Id = {game.game_id}</div>
-            </div>
+            <div>{game.name}</div>
+            <div>{game.release}</div>
+            <div>Genre = {game.genre}</div>
+            <div>ActiveGame = {game.id}</div>
+            <div>Game Id = {game.game_id}</div>
           </Link>
         </div>
-      </>
+      </React.Fragment>
     ));
     return (
       <div>
@@ -31,7 +29,7 @@ class RecentGamesList extends React.Component {
           <div className="container">
             <div className="row">
               <h5>Recently Released</h5>
-              <p>-----------------------------</p>
+              <hr></hr>
               {a}
             </div>
           </div>

@@ -16,23 +16,38 @@ export async function callFourEndpoints() {
   const j = gameApiStrings.length;
   for (let a = 0; a < b; a++) {
     for (let i = 0; i < j; i++) {
-      await fetchIGDB(gameApiStrings[i], a);
+      let key = gameApiStrings[i].name + " " + games[a].game_id;
+      let data = [];
+      console.log("Trying to get information for game = " + games[a].name);
+      console.log("Value of a is " + a);
+      console.log("The value of i is " + i);
+      if (localStorage.getItem(key)) {
+        console.log("Grabbing from localstorage");
+        data = JSON.parse(localStorage.getItem(key));
+      } else {
+        await fetchIGDB(gameApiStrings[i], a);
+      }
     }
   }
 }
 
 function constructHeaders() {
-  let newBearer = "h2r6ilku039zdh3idvf9layfjldzic";
-  let newBearer2 = "aw2wx6oywminwxy4ixub56bn5bvxje";
+  let bearerObject = [
+    "h2r6ilku039zdh3idvf9layfjldzic",
+    "aw2wx6oywminwxy4ixub56bn5bvxje",
+    "oi31u64btvw667eiud5pihj5nkj7jc",
+  ];
+  const bearerString = "Bearer " + bearerObject[2];
   let a = new Headers();
   a.append("Client-ID", "9h02jtd3d8ulk1057yluksq5ry4b0m");
-  a.append("Authorization", "Bearer aw2wx6oywminwxy4ixub56bn5bvxje");
+  a.append("Authorization", bearerString);
   a.append("Content-Type", "text/plain");
   return a;
 }
 function createHeaders(theHeaders, queryString) {
   const x = {
     method: "POST",
+    mode: "no-cors",
     headers: theHeaders,
     body: queryString,
     redirect: "follow",
@@ -115,7 +130,7 @@ function saveScreenshots(data, gameIndex) {
   const a = "https://images.igdb.com/igdb/image/upload/t_original/";
   const b = ".jpg";
   for (let i = 0; i < data.length; i++) {
-    let temp;
+    let temp = "";
     temp = a + data[i].image_id + b;
     games[gameIndex].screenshots[i] = temp;
   }
@@ -131,7 +146,7 @@ function saveVideos(data, gameIndex) {
 }
 
 async function fetchIGDB(gameData, index) {
-  var cors = "https:///circumvent-cors.herokuapp.com/";
+  var cors = "https://pacific-ocean-14685.herokuapp.com/";
   var myHeaders = constructHeaders();
   let data = [];
 
@@ -144,18 +159,18 @@ async function fetchIGDB(gameData, index) {
 
   try {
     if (localStorage.getItem(key)) {
-      // console.log("Grabbing from localstorage")
+      console.log("Grabbing from localstorage");
       data = JSON.parse(localStorage.getItem(key));
     } else {
-      console.log(`Making api call...`);
+      console.log("Making api call for Game ID = " + games[index].game_id);
       data = await fetch(url, fetchObject).then(parseJSON);
-      // console.log(JSON.stringify(data));
+      console.log(JSON.stringify(data));
       localStorage.setItem(key, JSON.stringify(data));
     }
   } catch (err) {
     console.log(err);
     console.log(
-      "Rate Limit or your token has expired!  If its a rate limit, try walking away for 20 minutes and trying again"
+      "Rate Limit, your token has expired or you need a new CORS proxy!  If its a rate limit, try walking away for 20 minutes and trying again"
     );
   }
   if (gameData.name === "games") {

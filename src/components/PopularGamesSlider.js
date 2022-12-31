@@ -53,13 +53,15 @@ class PopularGamesSlider extends React.Component {
               <h5>Popular Playstation 5 Games</h5>
               <div className="slick-slider-wrapper">
                 <Slider {...settings}>
-                  {games.map((i) => (
-                    <Link to={`/games/${i.id}`}>
-                      <div className="card" key={i}>
-                        <img src={i.cover} alt={i.name} />
-                        <h5>{i.name}</h5>
-                      </div>
-                    </Link>
+                  {games.map((i, index) => (
+                    <React.Fragment key={index}>
+                      <Link to={`/games/${i.id}`}>
+                        <div className="card" key={i}>
+                          <img src={i.cover} alt={i.name} />
+                          <h5>{i.name}</h5>
+                        </div>
+                      </Link>
+                    </React.Fragment>
                   ))}
                 </Slider>
               </div>
