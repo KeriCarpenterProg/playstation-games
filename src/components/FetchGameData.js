@@ -32,12 +32,8 @@ export async function callFourEndpoints() {
 }
 
 function constructHeaders() {
-  let bearerObject = [
-    "h2r6ilku039zdh3idvf9layfjldzic",
-    "aw2wx6oywminwxy4ixub56bn5bvxje",
-    "oi31u64btvw667eiud5pihj5nkj7jc",
-  ];
-  const bearerString = "Bearer " + bearerObject[2];
+  let bearerObject = ["x2bgricomrbg3pobdqrkzl8fvtzwow"];
+  const bearerString = "Bearer " + bearerObject;
   let a = new Headers();
   a.append("Client-ID", "9h02jtd3d8ulk1057yluksq5ry4b0m");
   a.append("Authorization", bearerString);
